@@ -1,4 +1,13 @@
-public class Amphibian {
+class Unit {
+    void breath() {
+        System.out.println("...");
+    }
+    void sayKva() {
+        System.out.println("xxx");
+    }
+}
+
+public class Amphibian extends Unit{
     void sayKva() {
         System.out.println("???");
     }
@@ -13,7 +22,8 @@ class Frog extends Amphibian {
 
     public static void main(String[] args) {
         Frog    frog = new Frog();
-        Amphibian   amphibian = (Amphibian)frog;
+        Unit   amphibian = (Unit) frog;
         amphibian.sayKva();
+        frog.breath();
     }
 }
