@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 class Gerbil {
@@ -26,5 +27,10 @@ public class _1 {
         for (Gerbil g: example) {
             g.hop();
         }
+        // exercise #8
+//        Iterator<Gerbil>    it = example.iterator();
+//        while (it.hasNext()) {
+//            it.next().hop();
+//        }
     }
 }
