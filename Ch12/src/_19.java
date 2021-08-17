@@ -11,6 +11,9 @@ public class _19 {
                 catch (SecondException e) {
                     e.printStackTrace();
                 }
+                finally {
+                    System.out.println("We have caught everything!");
+                }
             }
         }
         catch (Exception e) {
