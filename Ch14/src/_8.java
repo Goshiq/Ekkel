@@ -1,3 +1,4 @@
+import java.lang.reflect.Field;
 import java.util.*;
 
 public class _8 {
@@ -9,9 +10,14 @@ public class _8 {
         while (true) {
             className = c.getSimpleName();
             System.out.println(className);
+            System.out.println("Methods:");
+            for (Field s: Arrays.asList(c.getDeclaredFields())) {
+                System.out.println(s);
+            }
             if (className.equals("Object")) {
                 break;
             }
+            System.out.println();
             c = c.getSuperclass();
         }
     }
