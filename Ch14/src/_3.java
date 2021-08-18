@@ -1,5 +1,5 @@
 class Shape {
-    int color;
+    public int highlighted = 0;
     public void rotate() {
         if (!(this instanceof Circle)) {
             System.out.println("Rotating " + this.getClass().getSimpleName());
@@ -8,9 +8,18 @@ class Shape {
             System.out.println("Circle does not rotate!");
         }
     }
+
+    @Override
+    public String toString() {
+        return "It is " + (highlighted == 0 ? "" : "highlighted ") + this.getClass().getSimpleName();
+    }
 }
 
-class Rhomboid extends Shape {}
+class Rhomboid extends Shape {
+    public Rhomboid() {
+        highlighted = 1;
+    }
+}
 
 class Circle extends Shape {}
 
