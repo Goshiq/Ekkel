@@ -71,7 +71,7 @@ class GuyGenerator implements Generator<Guy>, Iterable<Guy> {
 
     public Guy next() {
         try {
-            return (Guy)(types[random.nextInt(types.length)].newInstance());
+            return (Guy)(types[random.nextInt(types.length)].getDeclaredConstructor(null).newInstance());
         }
         catch (Exception e) {
             throw new RuntimeException(e);
