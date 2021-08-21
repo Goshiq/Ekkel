@@ -38,5 +38,24 @@ public class _19 {
         System.out.println(Arrays.toString(arr1));
         System.out.println(Arrays.toString(arr2));
         System.out.println(Arrays.equals(arr1, arr2));
+
+        // #20
+        Item[][] arr3 = new Item[2][2];
+        int iter = 3;
+        for (Item[] outer: arr3) {
+            for (int i = 0; i < outer.length; ++i) {
+                outer[i] = new Item(iter++);
+            }
+        }
+        iter = 3;
+        Item[][] arr4 = new Item[2][2];
+        for (Item[] outer: arr4) {
+            for (int i = 0; i < outer.length; ++i) {
+                outer[i] = new Item(iter++);
+            }
+        }
+        System.out.println("Arr3: " + Arrays.deepToString(arr3));
+        System.out.println("Arr4: " + Arrays.deepToString(arr4));
+        System.out.println(Arrays.deepEquals(arr3, arr4));
     }
 }
