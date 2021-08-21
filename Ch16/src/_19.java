@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class Item {
+class Item implements Comparable{
     int id;
 
     public Item(int id) {
@@ -28,6 +28,12 @@ class Item {
         if (id == ((Item) obj).id)
             return true;
         return false;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Item temp = (Item) o;
+        return Integer.compare(id, temp.id);
     }
 }
 
@@ -57,5 +63,7 @@ public class _19 {
         System.out.println("Arr3: " + Arrays.deepToString(arr3));
         System.out.println("Arr4: " + Arrays.deepToString(arr4));
         System.out.println(Arrays.deepEquals(arr3, arr4));
+        // exercise #24
+        System.out.println("Result of binary search: " + Arrays.binarySearch(arr4[0], new Item(4)));
     }
 }
