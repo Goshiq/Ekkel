@@ -1,9 +1,6 @@
 import jdk.dynalink.linker.LinkerServices;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class _1 {
     public static void main(String[] args) {
