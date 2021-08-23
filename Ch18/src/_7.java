@@ -17,8 +17,9 @@ public class _7 {
                 while ((str = in.readLine()) != null) {
                     list.add(str);
                 }
-                Collections.reverse(list);
+//                Collections.reverse(list); // #7
                 for (String s : list) {
+//                    System.out.println(s.toUpperCase()); // #9
                     System.out.println(s);
                 }
             } catch (IOException e) {
