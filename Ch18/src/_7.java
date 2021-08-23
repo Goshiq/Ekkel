@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,7 +21,13 @@ public class _7 {
 //                Collections.reverse(list); // #7
                 for (String s : list) {
 //                    System.out.println(s.toUpperCase()); // #9
-                    System.out.println(s);
+                    if (args.length > 1) { // #10
+                        for (String l: Arrays.copyOfRange(args, 1, args.length)) {
+                            if (s.contains(l)) {
+                                System.out.println(s);
+                            }
+                        }
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
